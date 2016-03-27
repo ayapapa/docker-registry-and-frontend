@@ -43,6 +43,9 @@ cp {your-server-private-key} nginx/server.key
 cp {your-server-certificate} nginx/server.crt
 ```
 
+## Basic authentication(optional)
+To be done.
+
 ## Build 
 execute
 
@@ -56,3 +59,18 @@ execute
 ```
 docker-compose run -d 
 ```
+
+# Use registry
+ex.
+
+```
+sudo docker pull hello-world
+sudo docker tag hello-world {your registry server name}/test/hello-world
+sudo docker rmi {your registry server name}/test/hello-world
+sudo docker pull {your registry server name}/test/hello-world
+```
+
+# Use frontend
+
+brows {your registry server name}
+

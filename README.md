@@ -22,11 +22,13 @@ chmod +x /usr/local/bin/docker-compose
 
 ## SSL settings
 
-### If you like to create self-signed certificates, execute next command.
+### If you don't have your server certification
+create self-signed certificate and copy to ./nginx/. You can use next command.
 
 ```
 sudo ./set-selfsigned-cert
 ```
+
 In this case, need to set docker option like followings to clients.
 In the case of Ubuntu14.04: add following to /etc/default/docker
 
@@ -35,12 +37,14 @@ DOCKER_OPTS="--insecure-registry {registry server name or IP address}"
 ```
 
 ### If you have certificate, execute
-
+copy your server cert and key to ./nginx, as server.crt and server.key
 ```
 cp {your-server-private-key} nginx/server.key
 cp {your-server-certificate} nginx/server.crt
+```
 
 ## Build 
+execute
 
 ```
 docker-compose build
@@ -52,5 +56,3 @@ execute
 ```
 docker-compose run -d 
 ```
-
-

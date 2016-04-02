@@ -36,7 +36,7 @@ In the case of Ubuntu14.04: add following to /etc/default/docker
 DOCKER_OPTS="--insecure-registry {registry server name or IP address}"
 ```
 
-### If you have certificate, execute
+### If you have certificate
 copy your server cert and key to ./nginx, as server.crt and server.key
 ```
 cp {your-server-private-key} nginx/server.key
@@ -60,7 +60,7 @@ execute
 docker-compose run -d 
 ```
 
-# Use registry
+# How to use registry
 ex.
 
 ```
@@ -70,7 +70,12 @@ sudo docker rmi {your registry server name}/test/hello-world
 sudo docker pull {your registry server name}/test/hello-world
 ```
 
-# Use frontend
+# How to use frontend
 
-brows {your registry server name}
+brows http://{your registry server name}/
 
+
+# Refferences
+* https://docs.docker.com/
+* https://github.com/kwk/docker-registry-frontend
+* https://github.com/opskumu/docker-registry-compose

@@ -53,7 +53,7 @@ execute
 docker-compose build
 ```
 
-# Run registry and frontend
+# How to run registry and frontend
 execute
 
 ```

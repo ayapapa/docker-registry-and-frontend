@@ -72,7 +72,10 @@ sudo docker pull {your registry server name}/test/hello-world
 
 # How to use frontend
 
-brows http://{your registry server name}/
+brows http://{your registry server name}/   
+or   
+brows https://{your registry server name}/   
+
 
 
 # Refferences

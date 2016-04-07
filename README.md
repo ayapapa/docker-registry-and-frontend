@@ -36,7 +36,7 @@ In the case of Ubuntu14.04: add following to /etc/default/docker
 DOCKER_OPTS="--insecure-registry {registry server name or IP address}"
 ```
 
-### If you have certificate
+### If you have your server certification
 copy your server cert and key to ./nginx, as server.crt and server.key
 ```
 cp {your-server-private-key} nginx/server.key

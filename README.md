@@ -11,12 +11,13 @@ curl -fsSL https://get.docker.com/ | sh
 ```
 
 ## install docker-compose
-see https://docs.docker.com/compose/  
+see https://github.com/docker/compose/releases or https://docs.docker.com/compose/    
+
 for example:
 ```shell
 sudo su
 [sudo] password for user-name: (your password)
-curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+curl -L https://github.com/docker/compose/releases/download/1.7.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ```
 
@@ -57,7 +58,7 @@ docker-compose build
 execute
 
 ```
-docker-compose run -d 
+docker-compose up -d 
 ```
 
 # How to use registry
@@ -66,6 +67,7 @@ ex.
 ```
 sudo docker pull hello-world
 sudo docker tag hello-world {your registry server name}/test/hello-world
+sudo docker push {your registry server name}/test/hello-world
 sudo docker rmi {your registry server name}/test/hello-world
 sudo docker pull {your registry server name}/test/hello-world
 ```
